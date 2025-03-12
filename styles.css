@@ -1004,17 +1004,17 @@ h2 {
 /* Flower Decorations */
 .flower-top-right {
     position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 100px;
+    top: -60px;
+    right: -50px;
+    width: 120px;
     opacity: 0.3;
 }
 
 .flower-bottom-left {
     position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 100px;
+    bottom: -60px;
+    left: -50px;
+    width: 120px;
     opacity: 0.3;
 }
 
