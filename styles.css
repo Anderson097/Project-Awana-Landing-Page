@@ -266,7 +266,7 @@ nav ul li a {
 
     .info-box h2 {
         font-size: 20px;
-        margin-left: 0; /* Reset margins */
+        margin-left: -50px; /* Reset margins */
     }
 
     .info-box > p {
