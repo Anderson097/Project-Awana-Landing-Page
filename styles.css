@@ -475,6 +475,7 @@ h2 {
     height: 240px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    object-fit: cover;
 }
 
 
