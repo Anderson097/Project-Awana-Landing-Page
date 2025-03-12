@@ -223,16 +223,15 @@ nav ul li a {
 .info-section {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 20px;
     background-color: #08605f;
     color: rgba(255, 250, 237, 1);
-    height: auto; /* Adjust height for responsiveness */
+    height: 30vh; /* Adjust height for responsiveness */
 }
 
 /* Ensure boxes remain aligned */
 .info-box {
-    width: 100%;
-    margin-left: 20px;
+    width: 30%;
 }
 
 /* Titles and text styling */
@@ -241,11 +240,12 @@ nav ul li a {
     font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
+    margin-top: 10px;
     margin-left: -25px;
 }
 
 .info-box > p {
-    margin: 25px;
+    margin-top: 0.5rem;
     font-weight: 300;
 }
 
