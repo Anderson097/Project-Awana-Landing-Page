@@ -51,10 +51,15 @@ nav ul li a {
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
+    margin-right: .3rem;
 }
 
 /* Hide the hamburger on larger screens */
 .hamburger, #menu-toggle {
+    display: none;
+}
+
+.close-menu{
     display: none;
 }
 
@@ -73,6 +78,10 @@ nav ul li a {
     /* Hide checkbox */
     #menu-toggle {
         display: none;
+    }
+
+    .close-menu{
+        display: block;
     }
 
     /* Full-screen overlay menu */
@@ -116,17 +125,6 @@ nav ul li a {
     /* Show menu when checkbox is checked */
     #menu-toggle:checked ~ nav .menu {
         transform: translateY(0);
-    }
-
-    /* Close button (FIXED to top right) */
-    .close-btn {
-        display: block;
-        font-size: 36px;
-        color: white;
-        position: absolute;
-        top: 15px;
-        right: 20px; /* Moves it to the top right */
-        cursor: pointer;
     }
 }
 
