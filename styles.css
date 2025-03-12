@@ -231,7 +231,7 @@ nav ul li a {
 
 /* Ensure boxes remain aligned */
 .info-box {
-    width: 30%;
+    width: 100%;
     margin-left: 20px;
 }
 
