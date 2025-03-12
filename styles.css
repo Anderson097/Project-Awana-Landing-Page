@@ -226,7 +226,7 @@ nav ul li a {
     padding: 20px;
     background-color: #08605f;
     color: rgba(255, 250, 237, 1);
-    height: 30vh; /* Adjust height for responsiveness */
+    height: 35vh; /* Adjust height for responsiveness */
 }
 
 /* Ensure boxes remain aligned */
