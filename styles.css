@@ -26,7 +26,7 @@ header {
 
 .logo img {
     height: 40px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 /* Default navigation (Desktop View) */
@@ -232,6 +232,7 @@ nav ul li a {
 /* Ensure boxes remain aligned */
 .info-box {
     width: 30%;
+    margin-left: 20px;
 }
 
 /* Titles and text styling */
@@ -1029,8 +1030,8 @@ h2 {
 .header h2 {
     font-size: 22px;
     font-weight: 700;
-    margin-left: -50px;
-    margin-bottom: 300px;
+    margin-left: -200px;
+    margin-bottom: 325px;
 }
 
 .view-alls {
@@ -1172,6 +1173,7 @@ h2 {
     font-size: 24px;
     color: #ffffff;
     margin-bottom: 100px;
+    margin-left: -45px;
 }
 
 .donate-btns {
