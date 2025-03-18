@@ -13,6 +13,11 @@ body {
     
 }
 
+.genLayout{
+    max-width: 1100px;
+    margin: auto;
+}
+
 /* Default header styles */
 header {
     display: flex;
@@ -20,14 +25,18 @@ header {
     align-items: center;
     padding: 15px 40px;
     background: linear-gradient(to right, rgba(255, 250, 237, 1) 50%, #f4c400 50%);
-    height: 60px;
-    position: relative;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
 }
 
 .logo img {
     height: 40px;
     padding-left: 30px;
 }
+
 
 /* Default navigation (Desktop View) */
 nav ul {
@@ -385,19 +394,6 @@ nav ul li a {
     font-size: 22px;
     font-weight: bold;
     margin: 20px 0;
-    margin-left: 60px;
-}
-
-/* Prevents unwanted horizontal scrolling */
-body {
-    overflow-x: hidden;
-}
-
-/* Recent Activities */
-.section-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 20px 0;
     margin-left: 60px ;
 }
 
@@ -434,8 +430,9 @@ h2 {
     grid-template-columns: 1fr 1fr 0.6fr; /* The third column is smaller */
     gap: 30px; /* Space between activities */
     margin-bottom: 40px; /* Space below the section */
-    width: 220vh;
-    height: 40vh;
+    width: 250vh;
+    height: 41vh;
+    
 }
 
 .recent-activity {
@@ -507,6 +504,12 @@ h2 {
     margin-left: -1px; /* Adjust this value as needed */
 }
 
+.view-allS{
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
 /* 🌟 Responsive Design for Tablets */
 @media (max-width: 1024px) {
     .activities-container {
@@ -552,6 +555,39 @@ h2 {
         margin-top: 20px;
         font-size: 14px;
     }
+}
+
+@media (min-width: 1025px) { /* Apply only for larger screens */
+    .scroll-wrapper {
+        width: 100%; /* Full width */
+        overflow-x: auto; /* Enables horizontal scrolling */
+        padding-bottom: 10px; /* Space below the activities */
+        scrollbar-width: thin; /* Firefox scrollbar */
+        scrollbar-color: rgba(150, 188, 187, 0.7) transparent;
+    }
+
+    .scroll-wrapper::-webkit-scrollbar {
+        height: 8px; /* Thin scrollbar */
+    }
+
+    .scroll-wrapper::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Light track */
+    }
+
+    .scroll-wrapper::-webkit-scrollbar-thumb {
+        background: rgba(150, 188, 187, 0.7); /* Scrollbar color */
+        border-radius: 10px;
+    }
+
+    .scroll-wrapper::-webkit-scrollbar-thumb:hover {
+        background: rgba(150, 188, 187, 1); /* Darker on hover */
+    }
+
+    .activities-container {
+        display: flex; /* Ensures horizontal layout */
+        margin-left: 70px;
+    }
+
 }
 
 /* 📱 Responsive Design for Mobile */
@@ -790,10 +826,14 @@ h2 {
 }
 
 .view-allS {
-    font-size: 14px;
-    color: #4a4a4a;
     text-decoration: none;
+    font-size: 13px;
+    color: #333;
+    gap: 5px;
+    margin-right: 50px;
+    margin-top: -70px;
 }
+
 
 /* 🌟 Responsive Design for Smaller Screens */
 @media (max-width: 1024px) {
@@ -1151,11 +1191,13 @@ h2 {
 }
 
 .left-arrow {
-    left: 8%;
+    left: 20%;
+    margin-top: 60px;
 }
 
 .right-arrow {
-    right: 8%;
+    right: 20%;
+    margin-top: 58px;
 }
 
 /* ✅ Top Section (Separate Background) */
