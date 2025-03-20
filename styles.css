@@ -19,18 +19,20 @@ body {
 }
 
 /* Default header styles */
+/* Default header styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: linear-gradient(to right, rgba(255, 250, 237, 1) 50%, #f4c400 50%);
+    background: linear-gradient(to right, rgba(255, 250, 237, 1) 40%, #f4c400 40%);
     height: 40px;
     position: fixed;
     top: 0;
     z-index: 10000;
     width: 100%;
 }
+
 
 .logo img {
     height: 40px;
@@ -42,7 +44,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 nav ul li {
@@ -148,7 +150,7 @@ nav ul li a {
     justify-content: center;
     position: relative;
     background-color: rgba(255, 250, 237, 1);
-    padding-left: 80px;
+    padding-left: 75px;
     background: linear-gradient(to right, rgba(255, 250, 237, 1) 96%, #f4c400 80%);
 }
 
@@ -181,18 +183,19 @@ nav ul li a {
 
 /* Right Image Section with Yellow Background */
 .hero-image {
-    flex: 1.14;
-    z-index: 1;
+    flex: 1.75;
     overflow: hidden;
 }
 
 .hero-image img {
-    width: 100vh;
-    height: 50vh;
+    width: 176vh;
+    height: 70vh;
     display: block;
+    transform: translateX(-320px); /* Moves the image 20px to the left */
 }
 
 
+/* === Responsive Design (for smaller screens) === */
 /* === Responsive Design (for smaller screens) === */
 @media (max-width: 768px) {
     .hero {
@@ -224,13 +227,18 @@ nav ul li a {
         flex: none;
         width: 100%;
         text-align: center;
+        overflow: hidden; /* Ensures no unwanted overflow */
+        display: flex;
+        justify-content: center; /* Centers the image */
     }
 
     .hero-image img {
-        max-width: 80%;
+        max-width: 100%; /* Ensures it does not exceed the screen width */
         height: auto;
+        transform: translateX(0); /* Resets any leftward movement */
     }
 }
+
 
 /* Info Section */
 .info-section {
@@ -394,7 +402,6 @@ nav ul li a {
     font-size: 22px;
     font-weight: bold;
     margin: 20px 0;
-    margin-left: 60px ;
 }
 
 .recent-activity {
@@ -402,8 +409,6 @@ nav ul li a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    position: relative; /* Allows precise positioning */
-    left: 50px; /* Pushes it slightly to the right */
 }
 
 body {
@@ -411,7 +416,7 @@ body {
 }
 
 .recent-activities {
-    width: 80%;
+    width: 100%;
     margin: 30px auto;
 }
 
@@ -473,8 +478,8 @@ h2 {
 }
 
 .activity-image img {
-    width: 237px; /* Adjust image width */
-    height: 240px;
+    width: 255px; /* Adjust image width */
+    height: 258px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     object-fit: cover;
@@ -504,11 +509,6 @@ h2 {
     margin-left: -1px; /* Adjust this value as needed */
 }
 
-.view-allS{
-    display: flex;
-    position: absolute;
-    right: 0;
-}
 
 /* 🌟 Responsive Design for Tablets */
 @media (max-width: 1024px) {
@@ -585,7 +585,7 @@ h2 {
 
     .activities-container {
         display: flex; /* Ensures horizontal layout */
-        margin-left: 70px;
+        margin-left: 50px;
     }
 
 }
@@ -670,12 +670,13 @@ h2 {
         font-size:20px;
 }
 }
+
 /* Upcoming Events Section */
 .upcoming-events {
-    max-width: 1100px;
+    max-width: 1185px;
     margin: 50px auto;
-    padding: 20px;
-    position: relative;
+    width: 100%;
+    margin-left: 85px;
 }
 
 /* Flower Decoration */
@@ -710,9 +711,11 @@ h2 {
 
 .view-allss {
     text-decoration: none;
-    color: #4a4a4a;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    color: #333;
+    gap: 5px;
+    margin-right: 70px;
+    margin-top: -10px;
 }
 
 /* Grid Container */
@@ -805,10 +808,17 @@ h2 {
 
 /* Latest News Section */
 .latest-news {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 1240px;
     margin: 50px auto;
 }
+
+.latest-news {
+    position: relative;
+    z-index: 100; /* Ensure it's above other elements */
+    padding-left: 50px; /* Adjust as needed */
+}
+
 
 /* Header - Title & View All Button */
 .news-header {
@@ -816,7 +826,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: -50px;
+    margin-left: -45px;
 }
 
 .news-header h2 {
@@ -830,89 +840,113 @@ h2 {
     font-size: 13px;
     color: #333;
     gap: 5px;
-    margin-right: 50px;
+    margin-right: 80px;
     margin-top: -70px;
 }
 
-
-/* 🌟 Responsive Design for Smaller Screens */
+/* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
+    .upcoming-events {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .events-container {
-        grid-template-columns: 1fr; /* Stack sections */
-    }
-
-    .events-left-container {
-        height: auto;
-        margin-left: 0;
-    }
-
-    .flower-left {
-        left: -300px;
-        top: -150px;
-        width: 500px;
-        height: 1000px;
+        grid-template-columns: 1fr; /* Switch to single column */
     }
 
     .events-header h2 {
-        margin-left: 0;
-    }
-
-    .news-header {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .events-header {
-        flex-direction: column;
-        align-items: center;
+        font-size: 24px;
+        margin-left: 0; /* Remove negative margin */
         text-align: center;
-    }
-
-    .events-header h2 {
-        font-size: 22px;
         margin-bottom: 20px;
     }
 
-    .events-container {
-        grid-template-columns: 1fr;
+    .view-allss {
+        font-size: 12px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    .events-left-container {
+        margin-left: 0;
+        height: auto;
     }
 
     .event-card {
         flex-direction: column;
         text-align: center;
-        padding: 10px;
     }
 
     .event-icon img {
         width: 25px;
-        margin-right: 0;
         margin-bottom: 5px;
     }
 
-    .event-info .event-date {
-        font-size: 11px;
+    .events-right {
+        text-align: center;
     }
 
-    .event-info .event-title {
-        font-size: 14px;
+    .events-right > a {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 
+    .flower-left {
+        left: -200px; /* Move closer to the center */
+        top: -150px;
+        width: 600px;
+        height: 1200px;
+    }
+}
 
+@media (max-width: 768px) {
     .news-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-left: 0;
     }
 
     .news-header h2 {
         font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .view-allS {
+        font-size: 12px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .latest-news {
+        padding-left: 0;
+        width: 95%;
+    }
+
+    .flower-left {
+        width: 400px;
+        height: 900px;
+        left: -100px;
+        top: -100px;
+        opacity: 0.15;
     }
 }
 
 @media (max-width: 480px) {
     .events-header h2 {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .view-allss, .view-allS {
+        font-size: 11px;
+    }
+
+    .event-card {
+        padding: 10px;
     }
 
     .events-right h3 {
@@ -923,16 +957,11 @@ h2 {
         font-size: 12px;
     }
 
-    .event-card {
-        padding: 8px;
-    }
-
-    .event-info .event-title {
-        font-size: 12px;
-    }
-
-    .news-header h2 {
-        font-size: 18px;
+    .flower-left {
+        width: 300px;
+        height: 700px;
+        left: -50px;
+        top: -50px;
     }
 }
 
@@ -952,7 +981,7 @@ h2 {
     transition: 0.3s;
     width: 48vh;
     height: 40vh;
-    margin-left: -15px;
+    margin-left: 0;
 }
 
 .news-card img {
@@ -981,6 +1010,69 @@ h2 {
     margin-right: 5px;
 }
 
+/* Wrapper for News Cards to Enable Horizontal Scrolling */
+.news-wrapper {
+    display: flex; /* Ensures proper alignment */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping */
+    scroll-snap-type: x mandatory; /* Ensures smooth snapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    position: relative; /* Ensures it stays above other elements */
+    z-index: 20; /* Keeps it above backgrounds */
+    background: rgba(255, 250, 237, 1); /* Prevents blending into other sections */
+    padding: 10px 50px 15px; /* Adjusted padding */
+}
+
+/* Ensures News Cards Don't Go Under the Background */
+.latest-news {
+    position: relative; /* Keeps it above background */
+    z-index: 15; /* Higher than any other background */
+    padding-left: 30px; /* Adjust this value if needed */
+}
+
+/* News Container - Adjust to Fit Content */
+.news-container {
+    display: flex; /* Keeps items in a row */
+    gap: 20px;
+    width: max-content; /* Expands based on content, allowing scroll */
+}
+
+/* News Card Styling */
+.news-card {
+    flex: 0 0 auto; /* Prevents shrinking */
+    width: 48vh;
+    height: 40vh;
+    scroll-snap-align: start; /* Ensures each card snaps fully into view */
+    z-index: 11; /* Ensures cards stay above the background */
+}
+
+/* Custom Scrollbar Styling */
+.news-wrapper::-webkit-scrollbar {
+    height: 6px; /* Slightly bigger for visibility */
+}
+
+.news-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.news-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(150, 188, 187, 0.9);
+    border-radius: 10px;
+}
+
+.news-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(150, 188, 187, 1);
+}
+
+/* For Firefox */
+.news-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(150, 188, 187, 0.9) #f1f1f1;
+}
+
+
+
 /* 🌟 Responsive Design for Smaller Screens */
 @media (max-width: 1024px) {
     .news-container {
@@ -995,41 +1087,87 @@ h2 {
     }
 }
 
-@media (max-width: 768px) {
+/* 🌟 Responsive Design for Tablets */
+@media (max-width: 1024px) {
     .news-container {
-        grid-template-columns: 1fr; /* 1 column */
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px;
     }
 
     .news-card {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Fit within grid */
+        height: auto; /* Adjust height dynamically */
     }
 
     .news-card img {
-        height: 100px; /* Smaller images */
+        height: 100px; /* Adjust image height */
     }
 
     .news-card h3 {
         font-size: 14px;
+        margin: 10px;
     }
 
     .news-meta {
         font-size: 11px;
+        margin: 0 10px 10px;
     }
 }
 
-@media (max-width: 480px) {
+/* 📱 Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .news-wrapper {
+        overflow-x: auto; /* Enable smooth horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+        padding-left: 20px; /* Reduce padding */
+        scroll-snap-type: x mandatory; /* Enable snapping */
+    }
+
+    .news-container {
+        display: flex; /* Row layout */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 10px;
+    }
+
+    .news-card {
+        flex: 0 0 80%; /* Set width for smooth scrolling */
+        max-width: 300px; /* Prevent overly wide cards */
+        height: auto;
+        scroll-snap-align: start;
+    }
+
     .news-card img {
-        height: 90px;
+        height: 80px;
     }
 
     .news-card h3 {
         font-size: 13px;
+        margin: 8px;
     }
 
     .news-meta {
         font-size: 10px;
+    }
+}
+
+/* 📲 Extra Small Screens (Max 480px) */
+@media (max-width: 480px) {
+    .news-wrapper {
+        padding-left: 10px; /* Reduce extra spacing */
+    }
+
+    .news-card {
+        flex: 0 0 90%; /* Larger cards for smaller screens */
+        max-width: 250px;
+    }
+
+    .news-card h3 {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .news-meta {
+        font-size: 9px;
     }
 }
 
@@ -1067,26 +1205,64 @@ h2 {
 .header {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: -400px;
+    margin-left: -310px;
 }
 
 .header h2 {
     font-size: 22px;
     font-weight: 700;
     margin-left: -80px;
-    margin-bottom: 325px;
+    margin-bottom: 830px;
 }
 
 .view-alls {
     text-decoration: none;
     font-size: 13px;
     color: #333;
-    margin-bottom: 250px;
-    margin-right: -30px;
+    margin-bottom: 750px;
+    margin-right: -290px;
 }
+
+/* Responsive Header Section */
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        top: -360px; /* Moves it higher */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+        z-index: 10;
+    }
+
+    .header h2 {
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 10px; /* Reduced gap */
+    }
+
+    .view-alls {
+        font-size: 12px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    /* Hide arrows on small screens */
+    .arrows {
+        display: none;
+    }
+
+    .hear-kids-container{
+        height: 75vh;
+    }
+}
+
+
 
 /* Stacked Cards */
 .stack-container {
@@ -1096,7 +1272,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -300px;
+    margin-top: -350px;
 }
 
 /* Stacking Effect */
@@ -1192,12 +1368,12 @@ h2 {
 
 .left-arrow {
     left: 20%;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 .right-arrow {
     right: 20%;
-    margin-top: 58px;
+    margin-top: 100px;
 }
 
 /* ✅ Top Section (Separate Background) */
@@ -1233,19 +1409,35 @@ h2 {
     border-radius: 5px;
 }
 
-/* 🌟 Responsive Design for Tablets */
 @media (max-width: 1024px) {
     .top-section {
         flex-direction: column;
         text-align: center;
-        padding: 30px 40px;
+        padding: 30px 20px;
         height: auto;
     }
 
     .top-section h2 {
         font-size: 22px;
         margin-bottom: 20px;
-        margin-left: -50px;
+        margin-left: 0;
+    }
+
+    .donate-btns {
+        padding: 8px 18px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        padding: 25px 15px;
+        height: auto;
+    }
+
+    .top-section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
     }
 
     .donate-btns {
@@ -1254,37 +1446,20 @@ h2 {
     }
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .top-section {
-        padding: 20px 30px;
+        padding: 20px 10px;
+        height: auto;
     }
 
     .top-section h2 {
         font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    .donate-btns {
-        padding: 7px 14px;
-        font-size: 13px;
-    }
-}
-
-/* Extra Small Screens (Phones) */
-@media (max-width: 480px) {
-    .top-section {
-        padding: 15px 20px;
-    }
-
-    .top-section h2 {
-        font-size: 16px;
         margin-bottom: 10px;
     }
 
     .donate-btns {
-        padding: 6px 12px;
-        font-size: 12px;
+        padding: 6px 14px;
+        font-size: 13px;
     }
 }
 
@@ -1297,6 +1472,7 @@ h2 {
     background-repeat: no-repeat;
     padding: 40px 50px;
     color: white;
+    height: 64vh;
 }
 
 
@@ -1304,7 +1480,7 @@ h2 {
 .footer-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 30px;
+    gap: 45px;
 }
 
 /* Footer Column Styling */
@@ -1325,21 +1501,31 @@ h2 {
 
 .footer-column p {
     color: #ccc;
+    /* gap: 14px; */
 }
 
 /* ✅ Copyright Section */
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
     font-size: 14px;
     color: #bbb;
-    margin-top: 20px;
+    background-color: black;
+    width: 100vw; /* Ensures it covers the full viewport width */
+    margin-top: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 /* ✅ Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .footer{
+        height: 125vh;
     }
 }
 
@@ -1348,7 +1534,14 @@ h2 {
         grid-template-columns: 1fr; /* 1 column for mobile */
         text-align: center;
     }
+
+    .footer{
+        height: 125vh;
+    }
 }
 
-
-
+@media (min-width: 1025px){
+    .footer{
+        height: 64vh;
+    }
+}
