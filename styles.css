@@ -478,8 +478,8 @@ h2 {
 }
 
 .activity-image img {
-    width: 255px; /* Adjust image width */
-    height: 258px;
+    width: 240px; /* Adjust image width */
+    height: 240px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     object-fit: cover;
